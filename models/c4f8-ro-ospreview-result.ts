@@ -16,5 +16,5 @@
  * @export
  * @interface C4f8RoOSPreviewResult
  */
-export interface C4f8RoOSPreviewResult extends null<String, any> {
+export interface C4f8RoOSPreviewResult extends Record<string, any[]> {
 }

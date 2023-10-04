@@ -70,7 +70,7 @@ export enum ZzQH0lDwCrowdstrikeInputRequestOperatorEnum {
     LessThanOrEqualTo = '<=',
     GreaterThan = '>',
     GreaterThanOrEqualTo = '>=',
-     = '=='
+    Equal = '=='
 }
 /**
     * @export
@@ -81,6 +81,6 @@ export enum ZzQH0lDwCrowdstrikeInputRequestVersionOperatorEnum {
     LessThanOrEqualTo = '<=',
     GreaterThan = '>',
     GreaterThanOrEqualTo = '>=',
-     = '=='
+    Equal = '=='
 }
 

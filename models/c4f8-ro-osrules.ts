@@ -17,5 +17,5 @@ import { C4f8RoOSWafAction } from './c4f8-ro-oswaf-action';
  * @export
  * @interface C4f8RoOSRules
  */
-export interface C4f8RoOSRules extends null<String, C4f8RoOSWafAction> {
+export interface C4f8RoOSRules extends Record<string, C4f8RoOSWafAction> {
 }

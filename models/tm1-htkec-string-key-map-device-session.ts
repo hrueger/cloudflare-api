@@ -17,5 +17,5 @@ import { Tm1HTKEcDeviceSession } from './tm1-htkec-device-session';
  * @export
  * @interface Tm1HTKEcStringKeyMapDeviceSession
  */
-export interface Tm1HTKEcStringKeyMapDeviceSession extends null<String, Tm1HTKEcDeviceSession> {
+export interface Tm1HTKEcStringKeyMapDeviceSession extends Record<string, Tm1HTKEcDeviceSession> {
 }

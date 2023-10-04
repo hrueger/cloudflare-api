@@ -17,6 +17,6 @@
  * @enum {string}
  */
 export enum VXFDQCwXPatchPoolsNotificationEmail {
-     = '\"\"'
+    Empty = ''
 }
 

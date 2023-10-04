@@ -267,11 +267,11 @@ export const FirewallRulesApiAxiosParamCreator = function (configuration?: Confi
          * @summary Get a firewall rule
          * @param {C4f8RoOSFirewallRulesComponentsSchemasId} id 
          * @param {C4f8RoOSCommonComponentsSchemasIdentifier} zoneIdentifier 
-         * @param {C4f8RoOSFirewallRulesComponentsSchemasId} [id] 
+         * @param {C4f8RoOSFirewallRulesComponentsSchemasId} [id2] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        firewallRulesGetAFirewallRule: async (id: C4f8RoOSFirewallRulesComponentsSchemasId, zoneIdentifier: C4f8RoOSCommonComponentsSchemasIdentifier, id?: C4f8RoOSFirewallRulesComponentsSchemasId, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        firewallRulesGetAFirewallRule: async (id: C4f8RoOSFirewallRulesComponentsSchemasId, zoneIdentifier: C4f8RoOSCommonComponentsSchemasIdentifier, id2?: C4f8RoOSFirewallRulesComponentsSchemasId, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id','Required parameter id was null or undefined when calling firewallRulesGetAFirewallRule.');
@@ -318,8 +318,8 @@ export const FirewallRulesApiAxiosParamCreator = function (configuration?: Confi
                 localVarHeaderParameter["Authorization"] = "Bearer " + accessToken;
             }
 
-            if (id !== undefined) {
-                localVarQueryParameter['id'] = id;
+            if (id2 !== undefined) {
+                localVarQueryParameter['id'] = id2;
             }
 
             const query = new URLSearchParams(localVarUrlObj.search);
@@ -805,8 +805,8 @@ export const FirewallRulesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async firewallRulesGetAFirewallRule(id: C4f8RoOSFirewallRulesComponentsSchemasId, zoneIdentifier: C4f8RoOSCommonComponentsSchemasIdentifier, id?: C4f8RoOSFirewallRulesComponentsSchemasId, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<AxiosResponse<C4f8RoOSFilterRulesSingleResponse>>> {
-            const localVarAxiosArgs = await FirewallRulesApiAxiosParamCreator(configuration).firewallRulesGetAFirewallRule(id, zoneIdentifier, id, options);
+        async firewallRulesGetAFirewallRule(id: C4f8RoOSFirewallRulesComponentsSchemasId, zoneIdentifier: C4f8RoOSCommonComponentsSchemasIdentifier, id2?: C4f8RoOSFirewallRulesComponentsSchemasId, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<AxiosResponse<C4f8RoOSFilterRulesSingleResponse>>> {
+            const localVarAxiosArgs = await FirewallRulesApiAxiosParamCreator(configuration).firewallRulesGetAFirewallRule(id, zoneIdentifier, id2, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs :AxiosRequestConfig = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -946,8 +946,8 @@ export const FirewallRulesApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async firewallRulesGetAFirewallRule(id: C4f8RoOSFirewallRulesComponentsSchemasId, zoneIdentifier: C4f8RoOSCommonComponentsSchemasIdentifier, id?: C4f8RoOSFirewallRulesComponentsSchemasId, options?: AxiosRequestConfig): Promise<AxiosResponse<C4f8RoOSFilterRulesSingleResponse>> {
-            return FirewallRulesApiFp(configuration).firewallRulesGetAFirewallRule(id, zoneIdentifier, id, options).then((request) => request(axios, basePath));
+        async firewallRulesGetAFirewallRule(id: C4f8RoOSFirewallRulesComponentsSchemasId, zoneIdentifier: C4f8RoOSCommonComponentsSchemasIdentifier, id2?: C4f8RoOSFirewallRulesComponentsSchemasId, options?: AxiosRequestConfig): Promise<AxiosResponse<C4f8RoOSFilterRulesSingleResponse>> {
+            return FirewallRulesApiFp(configuration).firewallRulesGetAFirewallRule(id, zoneIdentifier, id2, options).then((request) => request(axios, basePath));
         },
         /**
          * Fetches firewall rules in a zone. You can filter the results using several optional parameters.
@@ -1068,8 +1068,8 @@ export class FirewallRulesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FirewallRulesApi
      */
-    public async firewallRulesGetAFirewallRule(id: C4f8RoOSFirewallRulesComponentsSchemasId, zoneIdentifier: C4f8RoOSCommonComponentsSchemasIdentifier, id?: C4f8RoOSFirewallRulesComponentsSchemasId, options?: AxiosRequestConfig) : Promise<AxiosResponse<C4f8RoOSFilterRulesSingleResponse>> {
-        return FirewallRulesApiFp(this.configuration).firewallRulesGetAFirewallRule(id, zoneIdentifier, id, options).then((request) => request(this.axios, this.basePath));
+    public async firewallRulesGetAFirewallRule(id: C4f8RoOSFirewallRulesComponentsSchemasId, zoneIdentifier: C4f8RoOSCommonComponentsSchemasIdentifier, id2?: C4f8RoOSFirewallRulesComponentsSchemasId, options?: AxiosRequestConfig) : Promise<AxiosResponse<C4f8RoOSFilterRulesSingleResponse>> {
+        return FirewallRulesApiFp(this.configuration).firewallRulesGetAFirewallRule(id, zoneIdentifier, id2, options).then((request) => request(this.axios, this.basePath));
     }
     /**
      * Fetches firewall rules in a zone. You can filter the results using several optional parameters.

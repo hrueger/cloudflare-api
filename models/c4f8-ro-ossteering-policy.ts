@@ -22,6 +22,6 @@ export enum C4f8RoOSSteeringPolicy {
     Random = 'random',
     DynamicLatency = 'dynamic_latency',
     Proximity = 'proximity',
-     = '\"\"'
+    Auto = ''
 }
 

@@ -71,6 +71,6 @@ export enum ZzQH0lDwOsVersionInputRequestOperatorEnum {
     LessThanOrEqualTo = '<=',
     GreaterThan = '>',
     GreaterThanOrEqualTo = '>=',
-     = '=='
+    Equal = '=='
 }
 

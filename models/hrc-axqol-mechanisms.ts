@@ -16,5 +16,5 @@
  * @export
  * @interface HrcAXqolMechanisms
  */
-export interface HrcAXqolMechanisms extends null<String, Array> {
+export interface HrcAXqolMechanisms extends Record<string, any[]> {
 }

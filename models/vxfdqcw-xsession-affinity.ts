@@ -21,6 +21,6 @@ export enum VXFDQCwXSessionAffinity {
     Cookie = 'cookie',
     IpCookie = 'ip_cookie',
     Header = 'header',
-     = '\"\"'
+    Auto = ""
 }
 

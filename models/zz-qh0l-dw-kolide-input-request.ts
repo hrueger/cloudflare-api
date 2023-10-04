@@ -46,6 +46,6 @@ export enum ZzQH0lDwKolideInputRequestCountOperatorEnum {
     LessThanOrEqualTo = '<=',
     GreaterThan = '>',
     GreaterThanOrEqualTo = '>=',
-     = '=='
+    Equal = '=='
 }
 

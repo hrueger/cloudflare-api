@@ -64,7 +64,7 @@ export enum ZzQH0lDwTaniumInputRequestOperatorEnum {
     LessThanOrEqualTo = '<=',
     GreaterThan = '>',
     GreaterThanOrEqualTo = '>=',
-     = '=='
+    Equal = '=='
 }
 /**
     * @export
@@ -85,6 +85,6 @@ export enum ZzQH0lDwTaniumInputRequestScoreOperatorEnum {
     LessThanOrEqualTo = '<=',
     GreaterThan = '>',
     GreaterThanOrEqualTo = '>=',
-     = '=='
+    Equal = '=='
 }
 

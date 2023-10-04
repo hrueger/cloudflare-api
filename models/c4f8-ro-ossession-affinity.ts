@@ -20,6 +20,6 @@ export enum C4f8RoOSSessionAffinity {
     None = 'none',
     Cookie = 'cookie',
     IpCookie = 'ip_cookie',
-     = '\"\"'
+    Auto = ""
 }
 

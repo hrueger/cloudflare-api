@@ -16,5 +16,5 @@
  * @export
  * @interface C4f8RoOSGroups
  */
-export interface C4f8RoOSGroups extends null<String, any> {
+export interface C4f8RoOSGroups extends Record<string, any[]> {
 }

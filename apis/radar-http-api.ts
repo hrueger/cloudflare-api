@@ -2215,7 +2215,7 @@ export const RadarHttpApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        radarGetHttpTopAsesByHttpProtocol: async (httpProtocol: string, limit?: number, name?: Array<string>, dateRange?: Array<string>, dateStart?: Array<Date>, dateEnd?: Array<Date>, asn?: Array<string>, location?: Array<string>, botClass?: Array<string>, deviceType?: Array<string>, httpProtocol?: Array<string>, ipVersion?: Array<string>, os?: Array<string>, tlsVersion?: Array<string>, format?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        radarGetHttpTopAsesByHttpProtocol: async (httpProtocol: string, limit?: number, name?: Array<string>, dateRange?: Array<string>, dateStart?: Array<Date>, dateEnd?: Array<Date>, asn?: Array<string>, location?: Array<string>, botClass?: Array<string>, deviceType?: Array<string>, httpProtocol2?: Array<string>, ipVersion?: Array<string>, os?: Array<string>, tlsVersion?: Array<string>, format?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'httpProtocol' is not null or undefined
             if (httpProtocol === null || httpProtocol === undefined) {
                 throw new RequiredError('httpProtocol','Required parameter httpProtocol was null or undefined when calling radarGetHttpTopAsesByHttpProtocol.');
@@ -2284,8 +2284,8 @@ export const RadarHttpApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['deviceType'] = deviceType;
             }
 
-            if (httpProtocol) {
-                localVarQueryParameter['httpProtocol'] = httpProtocol;
+            if (httpProtocol2) {
+                localVarQueryParameter['httpProtocol'] = httpProtocol2;
             }
 
             if (ipVersion) {
@@ -3472,7 +3472,7 @@ export const RadarHttpApiAxiosParamCreator = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        radarGetHttpTopLocationsByHttpProtocol: async (httpProtocol: string, limit?: number, name?: Array<string>, dateRange?: Array<string>, dateStart?: Array<Date>, dateEnd?: Array<Date>, asn?: Array<string>, location?: Array<string>, botClass?: Array<string>, deviceType?: Array<string>, httpProtocol?: Array<string>, ipVersion?: Array<string>, os?: Array<string>, tlsVersion?: Array<string>, format?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        radarGetHttpTopLocationsByHttpProtocol: async (httpProtocol: string, limit?: number, name?: Array<string>, dateRange?: Array<string>, dateStart?: Array<Date>, dateEnd?: Array<Date>, asn?: Array<string>, location?: Array<string>, botClass?: Array<string>, deviceType?: Array<string>, httpProtocol2?: Array<string>, ipVersion?: Array<string>, os?: Array<string>, tlsVersion?: Array<string>, format?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'httpProtocol' is not null or undefined
             if (httpProtocol === null || httpProtocol === undefined) {
                 throw new RequiredError('httpProtocol','Required parameter httpProtocol was null or undefined when calling radarGetHttpTopLocationsByHttpProtocol.');
@@ -3541,8 +3541,8 @@ export const RadarHttpApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['deviceType'] = deviceType;
             }
 
-            if (httpProtocol) {
-                localVarQueryParameter['httpProtocol'] = httpProtocol;
+            if (httpProtocol2) {
+                localVarQueryParameter['httpProtocol'] = httpProtocol2;
             }
 
             if (ipVersion) {
@@ -4720,8 +4720,8 @@ export const RadarHttpApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async radarGetHttpTopAsesByHttpProtocol(httpProtocol: string, limit?: number, name?: Array<string>, dateRange?: Array<string>, dateStart?: Array<Date>, dateEnd?: Array<Date>, asn?: Array<string>, location?: Array<string>, botClass?: Array<string>, deviceType?: Array<string>, httpProtocol?: Array<string>, ipVersion?: Array<string>, os?: Array<string>, tlsVersion?: Array<string>, format?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<AxiosResponse<InlineResponse200119>>> {
-            const localVarAxiosArgs = await RadarHttpApiAxiosParamCreator(configuration).radarGetHttpTopAsesByHttpProtocol(httpProtocol, limit, name, dateRange, dateStart, dateEnd, asn, location, botClass, deviceType, httpProtocol, ipVersion, os, tlsVersion, format, options);
+        async radarGetHttpTopAsesByHttpProtocol(httpProtocol: string, limit?: number, name?: Array<string>, dateRange?: Array<string>, dateStart?: Array<Date>, dateEnd?: Array<Date>, asn?: Array<string>, location?: Array<string>, botClass?: Array<string>, deviceType?: Array<string>, httpProtocol2?: Array<string>, ipVersion?: Array<string>, os?: Array<string>, tlsVersion?: Array<string>, format?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<AxiosResponse<InlineResponse200119>>> {
+            const localVarAxiosArgs = await RadarHttpApiAxiosParamCreator(configuration).radarGetHttpTopAsesByHttpProtocol(httpProtocol, limit, name, dateRange, dateStart, dateEnd, asn, location, botClass, deviceType, httpProtocol2, ipVersion, os, tlsVersion, format, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs :AxiosRequestConfig = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5000,8 +5000,8 @@ export const RadarHttpApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async radarGetHttpTopLocationsByHttpProtocol(httpProtocol: string, limit?: number, name?: Array<string>, dateRange?: Array<string>, dateStart?: Array<Date>, dateEnd?: Array<Date>, asn?: Array<string>, location?: Array<string>, botClass?: Array<string>, deviceType?: Array<string>, httpProtocol?: Array<string>, ipVersion?: Array<string>, os?: Array<string>, tlsVersion?: Array<string>, format?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<AxiosResponse<InlineResponse20071>>> {
-            const localVarAxiosArgs = await RadarHttpApiAxiosParamCreator(configuration).radarGetHttpTopLocationsByHttpProtocol(httpProtocol, limit, name, dateRange, dateStart, dateEnd, asn, location, botClass, deviceType, httpProtocol, ipVersion, os, tlsVersion, format, options);
+        async radarGetHttpTopLocationsByHttpProtocol(httpProtocol: string, limit?: number, name?: Array<string>, dateRange?: Array<string>, dateStart?: Array<Date>, dateEnd?: Array<Date>, asn?: Array<string>, location?: Array<string>, botClass?: Array<string>, deviceType?: Array<string>, httpProtocol2?: Array<string>, ipVersion?: Array<string>, os?: Array<string>, tlsVersion?: Array<string>, format?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<AxiosResponse<InlineResponse20071>>> {
+            const localVarAxiosArgs = await RadarHttpApiAxiosParamCreator(configuration).radarGetHttpTopLocationsByHttpProtocol(httpProtocol, limit, name, dateRange, dateStart, dateEnd, asn, location, botClass, deviceType, httpProtocol2, ipVersion, os, tlsVersion, format, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs :AxiosRequestConfig = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5589,8 +5589,8 @@ export const RadarHttpApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async radarGetHttpTopAsesByHttpProtocol(httpProtocol: string, limit?: number, name?: Array<string>, dateRange?: Array<string>, dateStart?: Array<Date>, dateEnd?: Array<Date>, asn?: Array<string>, location?: Array<string>, botClass?: Array<string>, deviceType?: Array<string>, httpProtocol?: Array<string>, ipVersion?: Array<string>, os?: Array<string>, tlsVersion?: Array<string>, format?: string, options?: AxiosRequestConfig): Promise<AxiosResponse<InlineResponse200119>> {
-            return RadarHttpApiFp(configuration).radarGetHttpTopAsesByHttpProtocol(httpProtocol, limit, name, dateRange, dateStart, dateEnd, asn, location, botClass, deviceType, httpProtocol, ipVersion, os, tlsVersion, format, options).then((request) => request(axios, basePath));
+        async radarGetHttpTopAsesByHttpProtocol(httpProtocol: string, limit?: number, name?: Array<string>, dateRange?: Array<string>, dateStart?: Array<Date>, dateEnd?: Array<Date>, asn?: Array<string>, location?: Array<string>, botClass?: Array<string>, deviceType?: Array<string>, httpProtocol2?: Array<string>, ipVersion?: Array<string>, os?: Array<string>, tlsVersion?: Array<string>, format?: string, options?: AxiosRequestConfig): Promise<AxiosResponse<InlineResponse200119>> {
+            return RadarHttpApiFp(configuration).radarGetHttpTopAsesByHttpProtocol(httpProtocol, limit, name, dateRange, dateStart, dateEnd, asn, location, botClass, deviceType, httpProtocol2, ipVersion, os, tlsVersion, format, options).then((request) => request(axios, basePath));
         },
         /**
          * Get the top autonomous systems by HTTP traffic. Values are a percentage out of the total traffic.
@@ -5829,8 +5829,8 @@ export const RadarHttpApiFactory = function (configuration?: Configuration, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async radarGetHttpTopLocationsByHttpProtocol(httpProtocol: string, limit?: number, name?: Array<string>, dateRange?: Array<string>, dateStart?: Array<Date>, dateEnd?: Array<Date>, asn?: Array<string>, location?: Array<string>, botClass?: Array<string>, deviceType?: Array<string>, httpProtocol?: Array<string>, ipVersion?: Array<string>, os?: Array<string>, tlsVersion?: Array<string>, format?: string, options?: AxiosRequestConfig): Promise<AxiosResponse<InlineResponse20071>> {
-            return RadarHttpApiFp(configuration).radarGetHttpTopLocationsByHttpProtocol(httpProtocol, limit, name, dateRange, dateStart, dateEnd, asn, location, botClass, deviceType, httpProtocol, ipVersion, os, tlsVersion, format, options).then((request) => request(axios, basePath));
+        async radarGetHttpTopLocationsByHttpProtocol(httpProtocol: string, limit?: number, name?: Array<string>, dateRange?: Array<string>, dateStart?: Array<Date>, dateEnd?: Array<Date>, asn?: Array<string>, location?: Array<string>, botClass?: Array<string>, deviceType?: Array<string>, httpProtocol2?: Array<string>, ipVersion?: Array<string>, os?: Array<string>, tlsVersion?: Array<string>, format?: string, options?: AxiosRequestConfig): Promise<AxiosResponse<InlineResponse20071>> {
+            return RadarHttpApiFp(configuration).radarGetHttpTopLocationsByHttpProtocol(httpProtocol, limit, name, dateRange, dateStart, dateEnd, asn, location, botClass, deviceType, httpProtocol2, ipVersion, os, tlsVersion, format, options).then((request) => request(axios, basePath));
         },
         /**
          * Get the top locations by HTTP traffic. Values are a percentage out of the total traffic.
@@ -6414,8 +6414,8 @@ export class RadarHttpApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RadarHttpApi
      */
-    public async radarGetHttpTopAsesByHttpProtocol(httpProtocol: string, limit?: number, name?: Array<string>, dateRange?: Array<string>, dateStart?: Array<Date>, dateEnd?: Array<Date>, asn?: Array<string>, location?: Array<string>, botClass?: Array<string>, deviceType?: Array<string>, httpProtocol?: Array<string>, ipVersion?: Array<string>, os?: Array<string>, tlsVersion?: Array<string>, format?: string, options?: AxiosRequestConfig) : Promise<AxiosResponse<InlineResponse200119>> {
-        return RadarHttpApiFp(this.configuration).radarGetHttpTopAsesByHttpProtocol(httpProtocol, limit, name, dateRange, dateStart, dateEnd, asn, location, botClass, deviceType, httpProtocol, ipVersion, os, tlsVersion, format, options).then((request) => request(this.axios, this.basePath));
+    public async radarGetHttpTopAsesByHttpProtocol(httpProtocol: string, limit?: number, name?: Array<string>, dateRange?: Array<string>, dateStart?: Array<Date>, dateEnd?: Array<Date>, asn?: Array<string>, location?: Array<string>, botClass?: Array<string>, deviceType?: Array<string>, httpProtocol2?: Array<string>, ipVersion?: Array<string>, os?: Array<string>, tlsVersion?: Array<string>, format?: string, options?: AxiosRequestConfig) : Promise<AxiosResponse<InlineResponse200119>> {
+        return RadarHttpApiFp(this.configuration).radarGetHttpTopAsesByHttpProtocol(httpProtocol, limit, name, dateRange, dateStart, dateEnd, asn, location, botClass, deviceType, httpProtocol2, ipVersion, os, tlsVersion, format, options).then((request) => request(this.axios, this.basePath));
     }
     /**
      * Get the top autonomous systems by HTTP traffic. Values are a percentage out of the total traffic.
@@ -6664,8 +6664,8 @@ export class RadarHttpApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RadarHttpApi
      */
-    public async radarGetHttpTopLocationsByHttpProtocol(httpProtocol: string, limit?: number, name?: Array<string>, dateRange?: Array<string>, dateStart?: Array<Date>, dateEnd?: Array<Date>, asn?: Array<string>, location?: Array<string>, botClass?: Array<string>, deviceType?: Array<string>, httpProtocol?: Array<string>, ipVersion?: Array<string>, os?: Array<string>, tlsVersion?: Array<string>, format?: string, options?: AxiosRequestConfig) : Promise<AxiosResponse<InlineResponse20071>> {
-        return RadarHttpApiFp(this.configuration).radarGetHttpTopLocationsByHttpProtocol(httpProtocol, limit, name, dateRange, dateStart, dateEnd, asn, location, botClass, deviceType, httpProtocol, ipVersion, os, tlsVersion, format, options).then((request) => request(this.axios, this.basePath));
+    public async radarGetHttpTopLocationsByHttpProtocol(httpProtocol: string, limit?: number, name?: Array<string>, dateRange?: Array<string>, dateStart?: Array<Date>, dateEnd?: Array<Date>, asn?: Array<string>, location?: Array<string>, botClass?: Array<string>, deviceType?: Array<string>, httpProtocol2?: Array<string>, ipVersion?: Array<string>, os?: Array<string>, tlsVersion?: Array<string>, format?: string, options?: AxiosRequestConfig) : Promise<AxiosResponse<InlineResponse20071>> {
+        return RadarHttpApiFp(this.configuration).radarGetHttpTopLocationsByHttpProtocol(httpProtocol, limit, name, dateRange, dateStart, dateEnd, asn, location, botClass, deviceType, httpProtocol2, ipVersion, os, tlsVersion, format, options).then((request) => request(this.axios, this.basePath));
     }
     /**
      * Get the top locations by HTTP traffic. Values are a percentage out of the total traffic.

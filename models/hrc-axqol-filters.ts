@@ -16,5 +16,5 @@
  * @export
  * @interface HrcAXqolFilters
  */
-export interface HrcAXqolFilters extends null<String, Array> {
+export interface HrcAXqolFilters extends Record<string, any[]> {
 }

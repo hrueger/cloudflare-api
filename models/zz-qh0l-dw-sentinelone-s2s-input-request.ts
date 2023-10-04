@@ -74,6 +74,6 @@ export enum ZzQH0lDwSentineloneS2sInputRequestOperatorEnum {
     LessThanOrEqualTo = '<=',
     GreaterThan = '>',
     GreaterThanOrEqualTo = '>=',
-     = '=='
+    Equal = '=='
 }
 

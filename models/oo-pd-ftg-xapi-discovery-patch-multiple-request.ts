@@ -17,5 +17,5 @@ import { OoPdFtgXApiDiscoveryPatchMultipleRequestEntry } from './oo-pd-ftg-xapi-
  * @export
  * @interface OoPdFtgXApiDiscoveryPatchMultipleRequest
  */
-export interface OoPdFtgXApiDiscoveryPatchMultipleRequest extends null<String, OoPdFtgXApiDiscoveryPatchMultipleRequestEntry> {
+export interface OoPdFtgXApiDiscoveryPatchMultipleRequest extends Record<string, OoPdFtgXApiDiscoveryPatchMultipleRequestEntry> {
 }

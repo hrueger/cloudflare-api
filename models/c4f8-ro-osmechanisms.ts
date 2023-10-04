@@ -16,5 +16,5 @@
  * @export
  * @interface C4f8RoOSMechanisms
  */
-export interface C4f8RoOSMechanisms extends null<String, Array> {
+export interface C4f8RoOSMechanisms extends Record<string, any[]> {
 }

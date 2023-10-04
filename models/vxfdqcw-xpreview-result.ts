@@ -16,5 +16,5 @@
  * @export
  * @interface VXFDQCwXPreviewResult
  */
-export interface VXFDQCwXPreviewResult extends null<String, any> {
+export interface VXFDQCwXPreviewResult extends Record<string, any> {
 }

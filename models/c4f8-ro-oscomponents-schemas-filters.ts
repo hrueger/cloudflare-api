@@ -16,5 +16,5 @@
  * @export
  * @interface C4f8RoOSComponentsSchemasFilters
  */
-export interface C4f8RoOSComponentsSchemasFilters extends null<String, Array> {
+export interface C4f8RoOSComponentsSchemasFilters extends Record<string, any> {
 }

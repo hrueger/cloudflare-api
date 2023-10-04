@@ -80,14 +80,14 @@ export const WorkersKVStoredDataAnalyticsApiAxiosParamCreator = function (config
                 localVarQueryParameter['query'] = query;
             }
 
-            const query = new URLSearchParams(localVarUrlObj.search);
+            const q = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
-                query.set(key, localVarQueryParameter[key]);
+                q.set(key, localVarQueryParameter[key]);
             }
             for (const key in options.params) {
-                query.set(key, options.params[key]);
+                q.set(key, options.params[key]);
             }
-            localVarUrlObj.search = (new URLSearchParams(query)).toString();
+            localVarUrlObj.search = (new URLSearchParams(q)).toString();
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
 

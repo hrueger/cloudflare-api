@@ -23,6 +23,6 @@ export enum VXFDQCwXSteeringPolicy {
     DynamicLatency = 'dynamic_latency',
     Proximity = 'proximity',
     LeastOutstandingRequests = 'least_outstanding_requests',
-     = '\"\"'
+    Auto = ""
 }
 
