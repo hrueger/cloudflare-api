@@ -120,14 +120,10 @@ export const CloudflareImagesApiAxiosParamCreator = function (configuration?: Co
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        cloudflareImagesCreateAuthenticatedDirectUploadUrlV2Form: async (expiry: Date, id: string, metadata: any, requireSignedURLs: boolean, accountIdentifier: ImagesAccountIdentifier, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        cloudflareImagesCreateAuthenticatedDirectUploadUrlV2Form: async (expiry: Date, id: string | undefined, metadata: Record<string, any> | undefined, requireSignedURLs: boolean, accountIdentifier: ImagesAccountIdentifier, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'expiry' is not null or undefined
             if (expiry === null || expiry === undefined) {
                 throw new RequiredError('expiry','Required parameter expiry was null or undefined when calling cloudflareImagesCreateAuthenticatedDirectUploadUrlV2Form.');
-            }
-            // verify required parameter 'id' is not null or undefined
-            if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling cloudflareImagesCreateAuthenticatedDirectUploadUrlV2Form.');
             }
             // verify required parameter 'metadata' is not null or undefined
             if (metadata === null || metadata === undefined) {
@@ -189,7 +185,7 @@ export const CloudflareImagesApiAxiosParamCreator = function (configuration?: Co
             }
 
             if (metadata !== undefined) { 
-                localVarFormParams.append('metadata', metadata as any);
+                localVarFormParams.append('metadata', typeof metadata === 'object' ? JSON.stringify(metadata) : metadata as any);
             }
 
             if (requireSignedURLs !== undefined) { 
@@ -778,7 +774,7 @@ export const CloudflareImagesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async cloudflareImagesCreateAuthenticatedDirectUploadUrlV2Form(expiry: Date, id: string, metadata: any, requireSignedURLs: boolean, accountIdentifier: ImagesAccountIdentifier, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<AxiosResponse<ImagesImageDirectUploadResponseV2>>> {
+        async cloudflareImagesCreateAuthenticatedDirectUploadUrlV2Form(expiry: Date, id: string | undefined, metadata: Record<string, any> | undefined, requireSignedURLs: boolean, accountIdentifier: ImagesAccountIdentifier, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => Promise<AxiosResponse<ImagesImageDirectUploadResponseV2>>> {
             const localVarAxiosArgs = await CloudflareImagesApiAxiosParamCreator(configuration).cloudflareImagesCreateAuthenticatedDirectUploadUrlV2Form(expiry, id, metadata, requireSignedURLs, accountIdentifier, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs :AxiosRequestConfig = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
@@ -925,7 +921,7 @@ export const CloudflareImagesApiFactory = function (configuration?: Configuratio
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async cloudflareImagesCreateAuthenticatedDirectUploadUrlV2Form(expiry: Date, id: string, metadata: any, requireSignedURLs: boolean, accountIdentifier: ImagesAccountIdentifier, options?: AxiosRequestConfig): Promise<AxiosResponse<ImagesImageDirectUploadResponseV2>> {
+        async cloudflareImagesCreateAuthenticatedDirectUploadUrlV2Form(expiry: Date, id: string | undefined, metadata: Record<string, any> | undefined, requireSignedURLs: boolean, accountIdentifier: ImagesAccountIdentifier, options?: AxiosRequestConfig): Promise<AxiosResponse<ImagesImageDirectUploadResponseV2>> {
             return CloudflareImagesApiFp(configuration).cloudflareImagesCreateAuthenticatedDirectUploadUrlV2Form(expiry, id, metadata, requireSignedURLs, accountIdentifier, options).then((request) => request(axios, basePath));
         },
         /**
@@ -1043,7 +1039,7 @@ export class CloudflareImagesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CloudflareImagesApi
      */
-    public async cloudflareImagesCreateAuthenticatedDirectUploadUrlV2Form(expiry: Date, id: string, metadata: any, requireSignedURLs: boolean, accountIdentifier: ImagesAccountIdentifier, options?: AxiosRequestConfig) : Promise<AxiosResponse<ImagesImageDirectUploadResponseV2>> {
+    public async cloudflareImagesCreateAuthenticatedDirectUploadUrlV2Form(expiry: Date, id: string | undefined, metadata: Record<string, any> | undefined, requireSignedURLs: boolean, accountIdentifier: ImagesAccountIdentifier, options?: AxiosRequestConfig) : Promise<AxiosResponse<ImagesImageDirectUploadResponseV2>> {
         return CloudflareImagesApiFp(this.configuration).cloudflareImagesCreateAuthenticatedDirectUploadUrlV2Form(expiry, id, metadata, requireSignedURLs, accountIdentifier, options).then((request) => request(this.axios, this.basePath));
     }
     /**
