@@ -1,0 +1,25 @@
+{
+  "name": "cloudflare-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Hannes Rüger <hannesrueger@gmx.de>",
+  "license": "MIT",
+  "packageManager": "yarn@3.6.4",
+  "type": "module",
+  "devDependencies": {
+    "esbuild": "^0.19.4",
+    "rimraf": "^5.0.5",
+    "rollup": "^3.29.4",
+    "rollup-plugin-dts": "^6.0.2",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "clean": "rimraf dist temp",
+    "bundle-js": "esbuild --platform=node index.ts --bundle --outfile=dist/index.js --format=esm --external:axios",
+    "bundle-ts": "tsc --emitDeclarationOnly --outDir temp || rollup -c rollup.config.js",
+    "build": "yarn clean && yarn bundle-js && yarn bundle-ts"
+  },
+  "dependencies": {
+    "axios": "^1.5.1"
+  }
+}

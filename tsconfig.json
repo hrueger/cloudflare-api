@@ -12,10 +12,11 @@
     ],
     "typeRoots": [
       "node_modules/@types"
-    ]
+    ],
+    "removeComments": true
   },
   "exclude": [
     "dist",
     "node_modules"
-  ]
+  ],
 }
